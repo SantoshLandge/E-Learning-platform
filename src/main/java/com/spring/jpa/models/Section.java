@@ -6,15 +6,13 @@ import lombok.*;
 
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Section {
+public class Section extends BaseEntity {
 
-    @Id
-    @GeneratedValue
-    private Integer id;
     private String sectionName;
     private String sectOrder;
 

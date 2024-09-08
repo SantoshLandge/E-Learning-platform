@@ -3,15 +3,13 @@ package com.spring.jpa.models;
 import jakarta.persistence.*;
 import lombok.*;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Resources {
+public class Resources extends BaseEntity {
 
-    @Id
-    @GeneratedValue
-    private Integer id;
     private String name;
     private String size;
     private String url;

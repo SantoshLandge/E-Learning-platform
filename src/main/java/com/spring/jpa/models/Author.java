@@ -5,15 +5,13 @@ import lombok.*;
 
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Author {
+public class Author extends BaseEntity {
 
-    @Id
-    @GeneratedValue
-    private Integer id;
     private String firstName;
     private String lastName;
 
