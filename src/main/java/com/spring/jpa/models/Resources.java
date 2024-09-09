@@ -9,8 +9,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @SuperBuilder
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-//@DiscriminatorColumn(name = "resource_type")  --> For SINGLE_TABLE strategy
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Resources {
 
     @Id

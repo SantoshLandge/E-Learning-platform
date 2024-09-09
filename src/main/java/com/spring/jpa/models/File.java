@@ -7,14 +7,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@SuperBuilder
 @Entity
-@PrimaryKeyJoinColumn(name = "file_id")
-//@DiscriminatorValue("F")  --> For SINGLE_TABLE strategy
 public class File extends Resources {
 
     private String type;

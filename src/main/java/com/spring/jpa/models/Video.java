@@ -12,8 +12,6 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @SuperBuilder
 @Entity
-@PrimaryKeyJoinColumn(name = "video_id")
-//@DiscriminatorValue("V") --> For SINGLE_TABLE strategy
 public class Video extends Resources {
 
     private Integer length;
