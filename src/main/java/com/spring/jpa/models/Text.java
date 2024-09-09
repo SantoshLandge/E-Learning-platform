@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@DiscriminatorValue("T")
+//@DiscriminatorValue("T")  --> For SINGLE_TABLE strategy
 public class Text extends Resources {
 
     private String content;

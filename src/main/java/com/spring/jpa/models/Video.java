@@ -11,7 +11,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @SuperBuilder
 @Entity
-@DiscriminatorValue("V")
+//@DiscriminatorValue("V") --> For SINGLE_TABLE strategy
 public class Video extends Resources {
 
     private Integer length;
