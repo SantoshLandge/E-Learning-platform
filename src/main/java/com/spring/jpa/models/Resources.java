@@ -2,13 +2,20 @@ package com.spring.jpa.models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@SuperBuilder
 @Entity
-public class Resources extends BaseEntity {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "resource_type")
+public class Resources {
+
+    @Id
+    @GeneratedValue
+    private Integer id;
 
     private String name;
     private String size;
